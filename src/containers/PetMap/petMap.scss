@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.map {
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 400px;
+  padding: 20px 15px 10px;
+  text-align: center;
+  background: $white;
+  position: relative;
+}
+
+.modalClose {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.menuButton {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  width: 35px;
+  z-index: 1000;
+  cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: $white;
+    margin: 6px 0;
+    transition: .3s;
+  }
+}
+
+.cross {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .bar2 {opacity: 0;}
+  
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}

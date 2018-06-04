@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.popup {
+  width: 200px;
+  padding-top: 15px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.removeButton {
+  composes: submit from '../AddMarkerModalContent/addMarkerModalContent.scss';
+  width: auto;
+  display: inline-block;
+  margin: 15px auto;
+}

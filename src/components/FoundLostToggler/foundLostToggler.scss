@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.input {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.label {
+	cursor: pointer;
+	width: 100px;
+	height: 30px;
+	background: $togglerColor;
+	display: block;
+	border-radius: 100px;
+  position: relative;
+  
+  &::before {
+    content: 'Found';
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    font-size: 20px;
+    color: $white;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background: $white;
+    border-radius: 90px;
+    border: 1px solid $togglerColor;
+  }
+}
+
+.input:checked {
+  & + .label::after {
+    left: calc(100% - 30px);
+  }
+
+  & + .label::before {
+    content: 'Lost';
+    left: 10px;
+    text-align: left;
+  }
+}

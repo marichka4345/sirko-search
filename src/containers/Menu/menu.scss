@@ -1,0 +1,66 @@
+@import '../../styles/variables.scss';
+
+.menu {
+  height: 100%;
+  width: 240px; 
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: $greyTextColor;
+  color: $white;
+  overflow-x: hidden; 
+  padding: 60px 20px 20px;
+  transition: 0.5s;
+  z-index: 900;
+}
+
+.title {
+  color: $white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.content {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.filter {
+  padding: 0 15px;
+}
+
+.input {
+  visibility: hidden;
+
+  &:not(:checked) + .label {  
+    &::before {
+      content: '\2212';
+    }
+  }
+
+  &:checked + .label {
+    &::before {
+      content: '\002B'; 
+      transform: translateX(7px); 
+    }
+  }
+}
+
+.label {
+  position: relative;
+  padding-left: 5px;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    top: -13px; 
+    display: inline-block;
+    color: $white;
+    font-size: 30px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+  }
+}

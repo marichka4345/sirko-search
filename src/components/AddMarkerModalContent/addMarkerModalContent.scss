@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.title {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.submit {
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px;
+  background: $submitButtonColor;
+  border: 0;
+  color: $white; 
+  cursor: pointer;
+
+  &:active {
+    outline: none;
+  }
+}

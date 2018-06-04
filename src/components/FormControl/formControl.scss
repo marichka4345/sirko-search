@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.formControl {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.label {
+  font-size: 1.3em;
+  color: $greyTextColor;
+}
+
+.input {
+  width: 60%;
+}
